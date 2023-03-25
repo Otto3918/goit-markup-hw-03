@@ -8,6 +8,33 @@
   --cornflower-color: #e7e9fc
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -49,7 +76,6 @@ a {
   background-color: var(--body-background-color, #ffffff);
 }
 
-
 .h-two-styles {
   font-size: 36px;
   line-height: 1.11;
@@ -73,17 +99,45 @@ a {
 }
 
 /*--------- HEADER ---------*/
-.navig-logo {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--iris-color, #4d5ae5);
+.section-headr {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--cornflower-color);
+
 }
 
-.folio-navig-logo {
+.container {
+  width: 1158px;
+  padding: 0 15px;
+
+  margin: 0 auto;
+  /* outline: 2px solid red; */
+}
+
+.headr-container {
+  display: flex;
+  align-items: center;
+}
+
+.headr-navigator {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.headr-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: 76px;
+}
+
+.adr-list {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.navig-logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -112,18 +166,87 @@ a {
 }
 
 .header-contact {
-  font-style: normal;
   line-height: 1.5;
+}
 
+.dark-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 192px 0;
+  gap: 48px;
+}
+
+.section-one {
+  padding: 120px 0;
+}
+
+.section-one-ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.section-one-li {
+  width: 264px;
+}
+
+.section-one-p {
+  margin-top: 8px;
+}
+
+.section-two {
+  padding-bottom: 120px;
+}
+
+.section-two-h {
+  margin-top: 72px;
+
+}
+
+.section-two-ul {
+  display: flex;
+  gap: 24px;
 }
 
 .section-three {
   background-color: var(--cloud-color);
+  padding: 120px 0;
+}
+
+.section-three-h {
+  padding-bottom: 72px;
+}
+
+.section-three-ul {
+  display: flex;
+  gap: 24px;
+}
+
+.section-three-card {
+  display: flex;
+  padding: 32px 16px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 1px 6px rgb(46 47 66 / 8%);
+  border-left: 1px solid var(--cornflower-color);
+  border-right: 1px solid var(--cornflower-color);
+  border-bottom: 1px solid var(--cornflower-color);
 }
 
 /*------------- FILTERS ----------*/
-.btn {
-  color: inherit;
+.section-portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.filters-ul {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.filters-btn {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -132,13 +255,12 @@ a {
   border-radius: 4px;
   border: none;
   cursor: pointer;
-}
-
-.filters-btn {
   color: var(--iris-color, #4d5ae5);
   background-color: var(--cloud-color);
   border: 1px solid var(--cornflower-color);
+  padding: 12px 24px;
 }
+
 
 .filters-btn:is(:hover, :focus) {
   color: var(--body-background-color);
@@ -147,12 +269,32 @@ a {
 }
 
 /*---------- IMAGES-ROW ----------*/
+.card-ul {
+  display: flex;
+  margin-top: 72px;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.card-content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px 16px;
+  box-shadow: 0px 1px 6px rgb(46 47 66 / 8%);
+  border-left: 1px solid var(--cornflower-color);
+  border-right: 1px solid var(--cornflower-color);
+  border-bottom: 1px solid var(--cornflower-color);
+}
+
 .card-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy-blue-color);
+  margin-bottom: 8px;
 }
 
 .card-desc {
@@ -185,12 +327,19 @@ a {
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: var(--body-background-color);
+  display: flex;
+  /* padding-top: 192px; */
+  /* padding-bottom: 48px; */
+  max-width: 496px;
 }
 
 .studio-btn {
   color: var(--body-background-color);
   background-color: var(--iris-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  padding: 16px 32px;
+
 }
 
 .studio-btn:is(:hover, :focus) {
@@ -200,6 +349,11 @@ a {
 /*------------- FOOTER ----------*/
 .footer-box {
   background-color: var(--navy-blue-color);
+  padding: 100px 0;
+}
+
+.footer-content {
+  max-width: 264px;
 }
 
 .logo-span-footer {
@@ -210,4 +364,5 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--cornflower-color);
+  padding-top: 18px;
 }
